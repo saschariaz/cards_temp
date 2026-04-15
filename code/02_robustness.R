@@ -1,10 +1,6 @@
 ################################################################################
 # Temperature and Aggression Revisited -- Robustness checks
 #
-# Reproduces the seven robustness tests referenced in the manuscript. Each
-# specification is estimated as a standalone feols() call with the formula
-# written out in full, then a single etable() call prints all results.
-#
 # Inputs:  data/data.rds
 # Outputs: none -- the combined table is printed to the console.
 #
