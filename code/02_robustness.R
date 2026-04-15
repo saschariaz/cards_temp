@@ -18,8 +18,6 @@ suppressPackageStartupMessages({
   library(fixest)
 })
 
-# Use the paper's significance thresholds (*** p<0.001, ** p<0.01, * p<0.05)
-# for the etable output.
 setFixest_etable(signif.code = c("***" = 0.001, "**" = 0.01, "*" = 0.05))
 
 d <- readRDS("data/data.rds") |> as_tibble()
@@ -100,9 +98,7 @@ m_female <- feols(
 
 
 # --- Output ------------------------------------------------------------------
-# Print a single table of all nine specifications, and save a LaTeX copy. We
-# hide the day-of-week and kickoff-hour dummies (test vii) so that the table
-# stays focused on the temperature terms.
+
 models <- list(
   m_baseline, m_cubic, m_elevation, m_apparent, m_adult,
   m_plz_cluster, m_precipitation, m_schedule, m_female
